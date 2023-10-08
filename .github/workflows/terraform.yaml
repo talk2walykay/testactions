@@ -1,6 +1,10 @@
 name: "Terraform"
 
 on: [push]
+env:
+# the environmental variables are read from the github repo setup in secrets and variable-actions
+  AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY}}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_KEY}}
 
 jobs:
   terraform:
