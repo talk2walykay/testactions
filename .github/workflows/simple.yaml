@@ -1,7 +1,7 @@
 name: shell commands
 
 
-on: [push]
+on: [push] #events can be push, pull_request etc
 
 jobs:
   run-shell-command:
