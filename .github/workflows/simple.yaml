@@ -22,7 +22,7 @@ jobs:
       #    shell: python
   run-windows-commands:
     runs-on: windows-latest
-    #needs: ["run-shell-command"] #this depends on the job "run-shell-command" to run first before job "windows-latest"
+    needs: ["run-shell-command"] #this depends on the job "run-shell-command" to run first before job "windows-latest"
     #with the "needs" keyword, the two jobs will run in sequence otherwise the two jobs will run in parallel
     steps:
       - name: Directory
